@@ -46,11 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Admin_create_delete_update_construction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Admin_create_delete_update_construction.Designer.cs">
+      <DependentUpon>Admin_create_delete_update_construction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_create_delete_update_worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_create_delete_update_worker.Designer.cs">
+      <DependentUpon>Admin_create_delete_update_worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_creation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_creation.Designer.cs">
+      <DependentUpon>Admin_creation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_login.Designer.cs">
+      <DependentUpon>Admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_menu.Designer.cs">
+      <DependentUpon>Admin_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_note_shift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_note_shift.Designer.cs">
+      <DependentUpon>Admin_note_shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_view_construction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_view_construction.Designer.cs">
+      <DependentUpon>Admin_view_construction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_view_workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_view_workers.Designer.cs">
+      <DependentUpon>Admin_view_workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meni.Designer.cs">
+      <DependentUpon>Meni.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

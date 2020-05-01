@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace attendance_diary
 {
-    public partial class Form1 : Form
+    public partial class Admin_creation : Form
     {
-        public Form1()
+        public Admin_creation()
         {
             InitializeComponent();
         }
