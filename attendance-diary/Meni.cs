@@ -15,6 +15,8 @@ namespace attendance_diary
         public Meni()
         {
             InitializeComponent();
+            API_Controller api = new API_Controller();
+            api.newAdmin();
         }
     }
 }
