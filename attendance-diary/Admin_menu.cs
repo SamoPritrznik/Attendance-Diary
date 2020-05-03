@@ -12,9 +12,12 @@ namespace attendance_diary
 {
     public partial class Admin_menu : Form
     {
-        public Admin_menu()
+        string admin_id;
+
+        public Admin_menu(string _id)
         {
             InitializeComponent();
+            admin_id = _id;
         }
     }
 }

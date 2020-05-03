@@ -16,7 +16,7 @@ namespace attendance_diary
 {
     public class Admins
     {
-        public String id { get; set; }
+        public String _id { get; set; }
         public String name { get; set; }
         public String surname { get; set; }
         public String email { get; set; }
@@ -26,7 +26,7 @@ namespace attendance_diary
 
     class API_Controller
     {
-        public void getAllAdmins()
+        public void getAllAdmins(string email, string password)
         {
             HttpClient clic = new HttpClient();
 
@@ -45,7 +45,11 @@ namespace attendance_diary
                 for (int x = 0; x < admin.Count; x++)
                 {
                     Admins a = admin[x];
-                    Console.WriteLine(a.name);
+                    if (a.email == email && a.password == password)
+                    {
+                        Admin_menu am = new Admin_menu(a._id);
+                        am.Show();
+                    }
                 }
             }
             else
@@ -53,6 +57,10 @@ namespace attendance_diary
                 Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
             }
             clic.Dispose();
+
+            Admins ad = new Admins();
+
+            Console.WriteLine(ad.ToString());
         }
 
         public async void newAdmin()
@@ -74,7 +82,5 @@ namespace attendance_diary
             string result = response.Content.ReadAsStringAsync().Result;
             Console.WriteLine(result);
         }
-
-
     }
 }

@@ -16,7 +16,7 @@ namespace attendance_diary
         {
             InitializeComponent();
             API_Controller api = new API_Controller();
-            api.newAdmin();
+            api.getAllAdmins();
         }
     }
 }
