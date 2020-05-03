@@ -19,5 +19,11 @@ namespace attendance_diary
             InitializeComponent();
             admin_id = _id;
         }
+
+        private void Btn_shift_Click(object sender, EventArgs e)
+        {
+            Admin_note_shift ad = new Admin_note_shift(admin_id);
+            ad.Show();
+        }
     }
 }
