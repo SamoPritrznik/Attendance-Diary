@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.Btn_shift = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // Btn_shift
+            // 
+            this.Btn_shift.Location = new System.Drawing.Point(13, 13);
+            this.Btn_shift.Name = "Btn_shift";
+            this.Btn_shift.Size = new System.Drawing.Size(130, 23);
+            this.Btn_shift.TabIndex = 0;
+            this.Btn_shift.Text = "Dodaj prisotnost";
+            this.Btn_shift.UseVisualStyleBackColor = true;
+            this.Btn_shift.Click += new System.EventHandler(this.Btn_shift_Click);
+            // 
+            // Admin_menu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Btn_shift);
+            this.Name = "Admin_menu";
             this.Text = "Admin_menu";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button Btn_shift;
     }
 }

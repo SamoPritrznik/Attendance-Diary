@@ -16,5 +16,15 @@ namespace attendance_diary
         {
             InitializeComponent();
         }
+
+        private void Btn_login_Click(object sender, EventArgs e)
+        {
+            API_Controller api = new API_Controller();
+            string obj = api.getAllAdmins();
+            if(api.logInAdmin(obj, Txt_email.Text, Txt_password.Text))
+            {
+                this.Hide();
+            }
+        }
     }
 }
