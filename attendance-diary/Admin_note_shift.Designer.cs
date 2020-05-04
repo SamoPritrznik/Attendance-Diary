@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateTimePickerShift
@@ -77,7 +78,7 @@
             // 
             // Btn_addTime
             // 
-            this.Btn_addTime.Location = new System.Drawing.Point(12, 216);
+            this.Btn_addTime.Location = new System.Drawing.Point(12, 228);
             this.Btn_addTime.Name = "Btn_addTime";
             this.Btn_addTime.Size = new System.Drawing.Size(75, 23);
             this.Btn_addTime.TabIndex = 4;
@@ -121,11 +122,21 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Ime gradbišča";
             // 
+            // Btn_back
+            // 
+            this.Btn_back.Location = new System.Drawing.Point(12, 257);
+            this.Btn_back.Name = "Btn_back";
+            this.Btn_back.Size = new System.Drawing.Size(100, 23);
+            this.Btn_back.TabIndex = 9;
+            this.Btn_back.Text = "Nazaj na meni";
+            this.Btn_back.UseVisualStyleBackColor = true;
+            // 
             // Admin_note_shift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 265);
+            this.ClientSize = new System.Drawing.Size(258, 307);
+            this.Controls.Add(this.Btn_back);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -153,5 +164,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Btn_back;
     }
 }

@@ -32,6 +32,7 @@
             this.Btn_admin_creation = new System.Windows.Forms.Button();
             this.Btn_add_worker = new System.Windows.Forms.Button();
             this.Btn_add_constructions = new System.Windows.Forms.Button();
+            this.Btn_export_workers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_shift
@@ -74,11 +75,22 @@
             this.Btn_add_constructions.UseVisualStyleBackColor = true;
             this.Btn_add_constructions.Click += new System.EventHandler(this.Btn_add_constructions_Click);
             // 
+            // Btn_export_workers
+            // 
+            this.Btn_export_workers.Location = new System.Drawing.Point(13, 316);
+            this.Btn_export_workers.Name = "Btn_export_workers";
+            this.Btn_export_workers.Size = new System.Drawing.Size(271, 23);
+            this.Btn_export_workers.TabIndex = 4;
+            this.Btn_export_workers.Text = "Pogled delavcev";
+            this.Btn_export_workers.UseVisualStyleBackColor = true;
+            this.Btn_export_workers.Click += new System.EventHandler(this.Btn_export_workers_Click);
+            // 
             // Admin_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 450);
+            this.Controls.Add(this.Btn_export_workers);
             this.Controls.Add(this.Btn_add_constructions);
             this.Controls.Add(this.Btn_add_worker);
             this.Controls.Add(this.Btn_admin_creation);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button Btn_admin_creation;
         private System.Windows.Forms.Button Btn_add_worker;
         private System.Windows.Forms.Button Btn_add_constructions;
+        private System.Windows.Forms.Button Btn_export_workers;
     }
 }
