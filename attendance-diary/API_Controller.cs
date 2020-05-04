@@ -130,12 +130,41 @@ namespace attendance_diary
             return workers;
         }
 
+
         public List<Time> returnListTime(string dataObjects, string worker_id)
         {
             List<Time> time = JsonConvert.DeserializeObject<List<Time>>(dataObjects);
             
 
             return time;
+        }
+
+        public string getWorkerName(string dataObjects, string worker_id)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            for (int x = 0; x < workers.Count; x++)
+            {
+                if (workers[x]._id == worker_id)
+                {
+                    return workers[x].name;
+                }
+            }
+            return "";
+        }
+
+        public string getWorkerSurname(string dataObjects, string worker_id)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            for (int x = 0; x < workers.Count; x++)
+            {
+                if (workers[x]._id == worker_id)
+                {
+                    return workers[x].surname;
+                }
+            }
+            return "";
         }
 
         public string getConstructionName(string dataObjects, string con_id)

@@ -130,6 +130,7 @@
             this.Btn_back.TabIndex = 9;
             this.Btn_back.Text = "Nazaj na meni";
             this.Btn_back.UseVisualStyleBackColor = true;
+            this.Btn_back.Click += new System.EventHandler(this.Btn_back_Click);
             // 
             // Admin_note_shift
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.CmbBx_worker);
             this.Controls.Add(this.DateTimePickerShift);
             this.Name = "Admin_note_shift";
-            this.Text = "Admin_note_shift";
+            this.Text = "Prisotnost";
             this.ResumeLayout(false);
             this.PerformLayout();
 

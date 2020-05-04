@@ -46,5 +46,13 @@ namespace attendance_diary
             DateTimePickerShift.Format = DateTimePickerFormat.Custom;
             DateTimePickerShift.CustomFormat = "yyyy-MM-dd";
         }
+
+        private void Btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Admin_menu ad = new Admin_menu(admin_id);
+
+            ad.Show();
+        }
     }
 }

@@ -78,13 +78,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 539);
+            this.ClientSize = new System.Drawing.Size(802, 517);
             this.Controls.Add(this.Cmb_workers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_export);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Admin_view_workers";
-            this.Text = "Admin_view_workers";
+            this.Text = "Pregled delavcev";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

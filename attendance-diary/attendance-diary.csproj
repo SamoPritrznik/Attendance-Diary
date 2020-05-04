@@ -197,6 +197,9 @@
     <EmbeddedResource Include="Admin_note_shift.resx">
       <DependentUpon>Admin_note_shift.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_view_construction.resx">
+      <DependentUpon>Admin_view_construction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_view_workers.resx">
       <DependentUpon>Admin_view_workers.cs</DependentUpon>
     </EmbeddedResource>
