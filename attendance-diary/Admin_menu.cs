@@ -24,6 +24,28 @@ namespace attendance_diary
         {
             Admin_note_shift ad = new Admin_note_shift(admin_id);
             ad.Show();
+            this.Close();
+        }
+
+        private void Btn_admin_creation_Click(object sender, EventArgs e)
+        {
+            Admin_creation ad = new Admin_creation(admin_id);
+            ad.Show();
+            this.Close();
+        }
+
+        private void Btn_add_worker_Click(object sender, EventArgs e)
+        {
+            Admin_create_delete_update_worker ad = new Admin_create_delete_update_worker(admin_id);
+            ad.Show();
+            this.Close();
+        }
+
+        private void Btn_add_constructions_Click(object sender, EventArgs e)
+        {
+            Admin_create_delete_update_construction ad = new Admin_create_delete_update_construction(admin_id);
+            ad.Show();
+            this.Close();
         }
     }
 }

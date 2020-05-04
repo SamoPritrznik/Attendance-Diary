@@ -175,6 +175,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_create_delete_update_construction.resx">
+      <DependentUpon>Admin_create_delete_update_construction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_create_delete_update_worker.resx">
+      <DependentUpon>Admin_create_delete_update_worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_creation.resx">
+      <DependentUpon>Admin_creation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_login.resx">
       <DependentUpon>Admin_login.cs</DependentUpon>
     </EmbeddedResource>
