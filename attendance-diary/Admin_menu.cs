@@ -47,5 +47,24 @@ namespace attendance_diary
             ad.Show();
             this.Close();
         }
+
+        private void Btn_export_workers_Click(object sender, EventArgs e)
+        {
+            Admin_view_workers ad = new Admin_view_workers();
+            ad.Show();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Admin_view_construction ad = new Admin_view_construction();
+            ad.Show();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Meni ad = new Meni();
+            ad.Show();
+        }
     }
 }

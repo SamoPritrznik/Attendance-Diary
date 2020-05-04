@@ -36,6 +36,10 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -192,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_note_shift.resx">
       <DependentUpon>Admin_note_shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_view_construction.resx">
+      <DependentUpon>Admin_view_construction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_view_workers.resx">
+      <DependentUpon>Admin_view_workers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Meni.resx">
       <DependentUpon>Meni.cs</DependentUpon>

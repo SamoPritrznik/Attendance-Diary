@@ -23,5 +23,10 @@ namespace attendance_diary
             Admin_login ad = new Admin_login();
             ad.Show();
         }
+
+        private void Btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

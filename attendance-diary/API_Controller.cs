@@ -96,6 +96,7 @@ namespace attendance_diary
             {
                 string dataObjects = response.Content.ReadAsStringAsync().Result;
                 return dataObjects;
+
             }
             else
             {
@@ -119,6 +120,64 @@ namespace attendance_diary
                 }
             }
 
+            return "";
+        }
+
+        public List<Workers> returnListWorkers(string dataObjects)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            return workers;
+        }
+
+
+        public List<Time> returnListTime(string dataObjects, string worker_id)
+        {
+            List<Time> time = JsonConvert.DeserializeObject<List<Time>>(dataObjects);
+            
+
+            return time;
+        }
+
+        public string getWorkerName(string dataObjects, string worker_id)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            for (int x = 0; x < workers.Count; x++)
+            {
+                if (workers[x]._id == worker_id)
+                {
+                    return workers[x].name;
+                }
+            }
+            return "";
+        }
+
+        public string getWorkerSurname(string dataObjects, string worker_id)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            for (int x = 0; x < workers.Count; x++)
+            {
+                if (workers[x]._id == worker_id)
+                {
+                    return workers[x].surname;
+                }
+            }
+            return "";
+        }
+
+        public string getConstructionName(string dataObjects, string con_id)
+        {
+            List<Constructions> constructions = JsonConvert.DeserializeObject<List<Constructions>>(dataObjects);
+            
+            for (int x = 0; x < constructions.Count; x++)
+            {
+                if (constructions[x]._id == con_id)
+                {
+                    return constructions[x].site_name;
+                }
+            }
             return "";
         }
 
@@ -229,6 +288,8 @@ namespace attendance_diary
             }
         }
 
+
+
         public async void insertWorker(string name, string sur, string phone)
         {
             var worker = new Workers();
@@ -327,6 +388,30 @@ namespace attendance_diary
             HttpClient clic = new HttpClient();
 
             clic.BaseAddress = new Uri($"https://attendance-diary.herokuapp.com/diary/admins");
+
+            clic.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = clic.GetAsync("").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string dataObjects = response.Content.ReadAsStringAsync().Result;
+                return dataObjects;
+            }
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
+            clic.Dispose();
+            string lel = "";
+            return lel;
+        }
+
+        public string getAllTime()
+        {
+            HttpClient clic = new HttpClient();
+
+            clic.BaseAddress = new Uri($"https://attendance-diary.herokuapp.com/diary/time");
 
             clic.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
