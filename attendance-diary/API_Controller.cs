@@ -183,6 +183,52 @@ namespace attendance_diary
             return listek;
         }
 
+        public async void insertConstruction(string location, string site_name, Boolean used)
+        {
+            var construction = new Constructions();
+            construction.location = location;
+            construction.site_name = site_name;
+            construction.used = used;
+
+            var json = JsonConvert.SerializeObject(construction);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var url = $"https://attendance-diary.herokuapp.com/diary/constructions";
+            var client = new HttpClient();
+
+            var response = await client.PostAsync(url, data);
+
+            string result = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(result);
+        }
+
+        public async void updateConstruction(string location, string site_name, Boolean used, string odl_site, string dataObjects)
+        {
+            List<Constructions> constructions = JsonConvert.DeserializeObject<List<Constructions>>(dataObjects);
+
+            for (int x = 0; x < constructions.Count(); x++)
+            {
+                if (constructions[x].site_name == odl_site)
+                {
+                    constructions[x].location = location;
+                    constructions[x].site_name = site_name;
+                    constructions[x].used = used;
+
+                    var json = JsonConvert.SerializeObject(constructions[x]);
+                    var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    var url = $"https://attendance-diary.herokuapp.com/diary/constructions/{constructions[x]._id}";
+                    var client = new HttpClient();
+
+                    var response = await client.PutAsync(url, data);
+
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine(result);
+                    break;
+                }
+            }
+        }
+
         public async void insertWorker(string name, string sur, string phone)
         {
             var worker = new Workers();

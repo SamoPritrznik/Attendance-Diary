@@ -31,11 +31,12 @@
             this.Btn_shift = new System.Windows.Forms.Button();
             this.Btn_admin_creation = new System.Windows.Forms.Button();
             this.Btn_add_worker = new System.Windows.Forms.Button();
+            this.Btn_add_constructions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_shift
             // 
-            this.Btn_shift.Location = new System.Drawing.Point(13, 283);
+            this.Btn_shift.Location = new System.Drawing.Point(13, 112);
             this.Btn_shift.Name = "Btn_shift";
             this.Btn_shift.Size = new System.Drawing.Size(271, 23);
             this.Btn_shift.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // Btn_admin_creation
             // 
-            this.Btn_admin_creation.Location = new System.Drawing.Point(13, 389);
+            this.Btn_admin_creation.Location = new System.Drawing.Point(13, 187);
             this.Btn_admin_creation.Name = "Btn_admin_creation";
             this.Btn_admin_creation.Size = new System.Drawing.Size(271, 23);
             this.Btn_admin_creation.TabIndex = 1;
@@ -63,11 +64,22 @@
             this.Btn_add_worker.UseVisualStyleBackColor = true;
             this.Btn_add_worker.Click += new System.EventHandler(this.Btn_add_worker_Click);
             // 
+            // Btn_add_constructions
+            // 
+            this.Btn_add_constructions.Location = new System.Drawing.Point(13, 256);
+            this.Btn_add_constructions.Name = "Btn_add_constructions";
+            this.Btn_add_constructions.Size = new System.Drawing.Size(271, 23);
+            this.Btn_add_constructions.TabIndex = 3;
+            this.Btn_add_constructions.Text = "Dodaj/Uredi gradbišče";
+            this.Btn_add_constructions.UseVisualStyleBackColor = true;
+            this.Btn_add_constructions.Click += new System.EventHandler(this.Btn_add_constructions_Click);
+            // 
             // Admin_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 450);
+            this.Controls.Add(this.Btn_add_constructions);
             this.Controls.Add(this.Btn_add_worker);
             this.Controls.Add(this.Btn_admin_creation);
             this.Controls.Add(this.Btn_shift);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button Btn_shift;
         private System.Windows.Forms.Button Btn_admin_creation;
         private System.Windows.Forms.Button Btn_add_worker;
+        private System.Windows.Forms.Button Btn_add_constructions;
     }
 }
