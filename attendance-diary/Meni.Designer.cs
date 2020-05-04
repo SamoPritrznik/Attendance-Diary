@@ -33,7 +33,7 @@
             // 
             // Btn_login
             // 
-            this.Btn_login.Location = new System.Drawing.Point(12, 12);
+            this.Btn_login.Location = new System.Drawing.Point(34, 61);
             this.Btn_login.Name = "Btn_login";
             this.Btn_login.Size = new System.Drawing.Size(272, 74);
             this.Btn_login.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(348, 207);
             this.Controls.Add(this.Btn_login);
             this.Name = "Meni";
             this.Text = "Form1";

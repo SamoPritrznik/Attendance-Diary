@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Btn_shift = new System.Windows.Forms.Button();
+            this.Btn_admin_creation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_shift
@@ -41,11 +42,22 @@
             this.Btn_shift.UseVisualStyleBackColor = true;
             this.Btn_shift.Click += new System.EventHandler(this.Btn_shift_Click);
             // 
+            // Btn_admin_creation
+            // 
+            this.Btn_admin_creation.Location = new System.Drawing.Point(13, 43);
+            this.Btn_admin_creation.Name = "Btn_admin_creation";
+            this.Btn_admin_creation.Size = new System.Drawing.Size(130, 23);
+            this.Btn_admin_creation.TabIndex = 1;
+            this.Btn_admin_creation.Text = "Dodaj admina";
+            this.Btn_admin_creation.UseVisualStyleBackColor = true;
+            this.Btn_admin_creation.Click += new System.EventHandler(this.Btn_admin_creation_Click);
+            // 
             // Admin_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Btn_admin_creation);
             this.Controls.Add(this.Btn_shift);
             this.Name = "Admin_menu";
             this.Text = "Admin_menu";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button Btn_shift;
+        private System.Windows.Forms.Button Btn_admin_creation;
     }
 }

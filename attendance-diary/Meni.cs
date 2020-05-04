@@ -15,6 +15,8 @@ namespace attendance_diary
         public Meni()
         {
             InitializeComponent();
+            
+            
         }
 
         private void Btn_login_Click(object sender, EventArgs e)
