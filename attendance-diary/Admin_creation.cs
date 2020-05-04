@@ -80,5 +80,100 @@ namespace attendance_diary
 
             display();
         }
+
+        private void SplitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void Txt_pass_create_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_email_create_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_sur_create_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_nam_create_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_pass_edit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_admins_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_email_edit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_nam_edit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_sur_edit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,6 +56,8 @@ namespace attendance_diary
 
     class API_Controller
     {
+       
+
         public string getAllWorkers()
         {
             HttpClient clic = new HttpClient();
@@ -179,6 +181,51 @@ namespace attendance_diary
             }
 
             return listek;
+        }
+
+        public async void insertWorker(string name, string sur, string phone)
+        {
+            var worker = new Workers();
+            worker.name = name;
+            worker.surname = sur;
+            worker.phone_num = phone;
+
+            var json = JsonConvert.SerializeObject(worker);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var url = $"https://attendance-diary.herokuapp.com/diary/workers";
+            var client = new HttpClient();
+
+            var response = await client.PostAsync(url, data);
+
+            string result = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(result);
+        }
+
+        public async void updateWorker(string name, string sur, string phone, string old_name, string old_surname, string dataObjects)
+        {
+            List<Workers> workers = JsonConvert.DeserializeObject<List<Workers>>(dataObjects);
+
+            for (int x = 0; x < workers.Count(); x++)
+            {
+                if (workers[x].name == old_name && workers[x].surname == old_surname)
+                {
+                    workers[x].name = name;
+                    workers[x].surname = sur;
+                    workers[x].phone_num = phone;
+
+                    var json = JsonConvert.SerializeObject(workers[x]);
+                    var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    var url = $"https://attendance-diary.herokuapp.com/diary/workers/{workers[x]._id}";
+                    var client = new HttpClient();
+
+                    var response = await client.PutAsync(url, data);
+
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine(result);
+                }
+            }
         }
 
         public async void insertAdmin(string name, string sur, string email, string pass)
