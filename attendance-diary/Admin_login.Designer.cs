@@ -33,6 +33,7 @@
             this.Txt_email = new System.Windows.Forms.TextBox();
             this.Txt_password = new System.Windows.Forms.TextBox();
             this.Btn_login = new System.Windows.Forms.Button();
+            this.Btn_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Email
@@ -72,17 +73,28 @@
             // 
             this.Btn_login.Location = new System.Drawing.Point(12, 132);
             this.Btn_login.Name = "Btn_login";
-            this.Btn_login.Size = new System.Drawing.Size(75, 23);
+            this.Btn_login.Size = new System.Drawing.Size(100, 23);
             this.Btn_login.TabIndex = 4;
             this.Btn_login.Text = "Prijava";
             this.Btn_login.UseVisualStyleBackColor = true;
             this.Btn_login.Click += new System.EventHandler(this.Btn_login_Click);
             // 
+            // Btn_exit
+            // 
+            this.Btn_exit.Location = new System.Drawing.Point(12, 161);
+            this.Btn_exit.Name = "Btn_exit";
+            this.Btn_exit.Size = new System.Drawing.Size(101, 23);
+            this.Btn_exit.TabIndex = 5;
+            this.Btn_exit.Text = "Zapri program";
+            this.Btn_exit.UseVisualStyleBackColor = true;
+            this.Btn_exit.Click += new System.EventHandler(this.Btn_exit_Click);
+            // 
             // Admin_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 191);
+            this.ClientSize = new System.Drawing.Size(268, 208);
+            this.Controls.Add(this.Btn_exit);
             this.Controls.Add(this.Btn_login);
             this.Controls.Add(this.Txt_password);
             this.Controls.Add(this.Txt_email);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.TextBox Txt_email;
         private System.Windows.Forms.TextBox Txt_password;
         private System.Windows.Forms.Button Btn_login;
+        private System.Windows.Forms.Button Btn_exit;
     }
 }

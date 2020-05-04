@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 
 namespace attendance_diary
 {
+
     public class Admins
     {
         public String _id { get; set; }
@@ -163,7 +164,70 @@ namespace attendance_diary
             }
 
             return listek;
-        } 
+        }
+
+        public List<String> AdminsToCmb(string dataObjects)
+        {
+            List<Admins> admins = JsonConvert.DeserializeObject<List<Admins>>(dataObjects);
+            List<String> listek = new List<String>();
+
+            for (int x = 0; x < admins.Count; x++)
+            {
+                Admins a = admins[x];
+
+                listek.Add(a.name + " " + a.surname);
+            }
+
+            return listek;
+        }
+
+        public async void insertAdmin(string name, string sur, string email, string pass)
+        {
+            var admin = new Admins();
+            admin.name = name;
+            admin.surname = sur;
+            admin.email = email;
+            admin.password = pass;
+
+            var json = JsonConvert.SerializeObject(admin);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var url = $"https://attendance-diary.herokuapp.com/diary/admins";
+            var client = new HttpClient();
+
+            var response = await client.PostAsync(url, data);
+
+            string result = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(result);
+
+        }
+
+        public async void updateAdmin(string name, string sur, string email, string pass, string old_name, string old_surname, string dataObjects)
+        {
+            List<Admins> admins = JsonConvert.DeserializeObject<List<Admins>>(dataObjects);
+
+            for (int x = 0; x < admins.Count(); x++)
+            {
+                if(admins[x].name == old_name && admins[x].surname == old_surname)
+                {
+                    admins[x].name = name;
+                    admins[x].surname = sur;
+                    admins[x].email = email;
+                    admins[x].password = pass;
+
+                    var json = JsonConvert.SerializeObject(admins[x]);
+                    var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    var url = $"https://attendance-diary.herokuapp.com/diary/admins/{admins[x]._id}";
+                    var client = new HttpClient();
+
+                    var response = await client.PutAsync(url, data);
+
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine(result);
+                }
+            }
+        }
 
         public string getAllAdmins()
         {
@@ -207,25 +271,6 @@ namespace attendance_diary
             return false;
         }
 
-        public async void newAdmin()
-        {
-            var admin = new Admins();
-            admin.name = "luka";
-            admin.surname = "lah";
-            admin.email = "lah@gmail.com";
-            admin.password = "1572456";
-
-            var json = JsonConvert.SerializeObject(admin);
-            var data = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var url = $"https://attendance-diary.herokuapp.com/diary/admins";
-            var client = new HttpClient();
-
-            var response = await client.PostAsync(url, data);
-
-            string result = response.Content.ReadAsStringAsync().Result;
-            Console.WriteLine(result);
-        }
 
         public async void addTime(string admin_id, string worker_id, string construction_id, int Shift, string Timestamp_date)
         {
