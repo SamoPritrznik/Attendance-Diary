@@ -14,9 +14,14 @@ namespace attendance_diary
     {
         public Meni()
         {
-            InitializeComponent();
-            API_Controller api = new API_Controller();
-            api.newAdmin();
+            InitializeComponent();   
+        }
+
+        private void Btn_login_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_login ad = new Admin_login();
+            ad.Show();
         }
     }
 }

@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.Btn_shift = new System.Windows.Forms.Button();
+            this.Btn_admin_creation = new System.Windows.Forms.Button();
+            this.Btn_add_worker = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // Btn_shift
+            // 
+            this.Btn_shift.Location = new System.Drawing.Point(13, 283);
+            this.Btn_shift.Name = "Btn_shift";
+            this.Btn_shift.Size = new System.Drawing.Size(271, 23);
+            this.Btn_shift.TabIndex = 0;
+            this.Btn_shift.Text = "Dodaj prisotnost";
+            this.Btn_shift.UseVisualStyleBackColor = true;
+            this.Btn_shift.Click += new System.EventHandler(this.Btn_shift_Click);
+            // 
+            // Btn_admin_creation
+            // 
+            this.Btn_admin_creation.Location = new System.Drawing.Point(13, 389);
+            this.Btn_admin_creation.Name = "Btn_admin_creation";
+            this.Btn_admin_creation.Size = new System.Drawing.Size(271, 23);
+            this.Btn_admin_creation.TabIndex = 1;
+            this.Btn_admin_creation.Text = "Dodaj/Uredi admina";
+            this.Btn_admin_creation.UseVisualStyleBackColor = true;
+            this.Btn_admin_creation.Click += new System.EventHandler(this.Btn_admin_creation_Click);
+            // 
+            // Btn_add_worker
+            // 
+            this.Btn_add_worker.Location = new System.Drawing.Point(13, 42);
+            this.Btn_add_worker.Name = "Btn_add_worker";
+            this.Btn_add_worker.Size = new System.Drawing.Size(271, 23);
+            this.Btn_add_worker.TabIndex = 2;
+            this.Btn_add_worker.Text = "Dodaj/Uredi Delavca";
+            this.Btn_add_worker.UseVisualStyleBackColor = true;
+            this.Btn_add_worker.Click += new System.EventHandler(this.Btn_add_worker_Click);
+            // 
+            // Admin_menu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(296, 450);
+            this.Controls.Add(this.Btn_add_worker);
+            this.Controls.Add(this.Btn_admin_creation);
+            this.Controls.Add(this.Btn_shift);
+            this.Name = "Admin_menu";
             this.Text = "Admin_menu";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button Btn_shift;
+        private System.Windows.Forms.Button Btn_admin_creation;
+        private System.Windows.Forms.Button Btn_add_worker;
     }
 }
