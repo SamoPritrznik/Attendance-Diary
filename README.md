@@ -9,8 +9,6 @@ The connection to the database is provided by the custom API that we have create
 
 For the database we used MongoDB.
 
-![Image of the database](https://github.com/SamoPritrznik/Library-management-system/blob/master/Database%20image.png)
-
 # Admins
 Admins can be only be created by other admins. An admins role is to add/edit workers, add/edit construction sites and add attendance for individual workers. 
 
@@ -27,5 +25,5 @@ Moreover admins can export this gidviews into excel.
 ## Authors
 
 ```JS
-const AUTHOR = 'Samo Pungaršek Pritržnik' //https://github.com/JanezSedeljsak;
+const AUTHOR = 'Samo Pungaršek Pritržnik' //https://github.com/SamoPritrznik;
 ```
