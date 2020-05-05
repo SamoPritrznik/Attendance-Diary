@@ -65,6 +65,7 @@
             this.Btn_export.TabIndex = 7;
             this.Btn_export.Text = "Izvozi v excel";
             this.Btn_export.UseVisualStyleBackColor = true;
+            this.Btn_export.Click += new System.EventHandler(this.Btn_export_Click);
             // 
             // dataGridView1
             // 
